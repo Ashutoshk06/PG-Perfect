@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      // Import the environment variable from the Vite environment
+      const scriptSrc = import.meta.env.VITE_RAZORPAY_CHECKOUT_URL;
+
+      // Create a new script element
+      const script = document.createElement('script');
+      script.src = scriptSrc;
+      script.async = true;
+
+      // Append the script element to the body or head
+      document.head.appendChild(script);
+  </script>
+  </body>
+</html>
